@@ -1,52 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nlang CI Test</title>
-    <style>
-        body {
-            background-color: #1a1a2e;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #0f3460;
-        }
-        .status {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #0f3460;
-        }
-        .links {
-            margin-top: 20px;
-        }
-        a {
-            color: #e0e0e0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nlang CI Test</title>
+  <style>
+    :root {
+      --bg: #1a1a2e;
+      --text: #e0e0e0;
+      --accent: #0f3460;
+      --muted: #b8b8c8;
+      --card: #16213e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .status {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.75rem;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      background: var(--accent);
+      padding: 0.6rem 0.9rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 0.4rem 0.5rem 0 0;
+    }
+
+    a:hover {
+      opacity: 0.9;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
     <h1>nlang CI Test</h1>
-    <div class="status">
-        <h2>Build Status</h2>
-        <p>Build Time: 2026-03-17T12:56:56.141Z</p>
-        <p>Environment: ci</p>
-        <p>Node Version: v22.22.1</p>
-        <p>Status: [Placeholder for build status]</p>
-    </div>
-    <div class="links">
-        <h2>Reports</h2>
-        <ul>
-            <li><a href="/reports/uptime.html">Uptime Report</a></li>
-            <li><a href="/reports/daily-summary.html">Daily Summary Report</a></li>
-        </ul>
-    </div>
+
+    <section class="card">
+      <h2>Build Status</h2>
+      <div class="status">Status: Build information available. Placeholder status OK.</div>
+      <div class="meta">
+        <div>Build Time: 2026-03-17T14:03:08.697Z</div>
+        <div>Environment: ci</div>
+        <div>Node: v22.22.1</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Reports</h2>
+      <ul>
+        <li><a href="/reports/uptime.html">Uptime Report</a></li>
+        <li><a href="/reports/daily-summary.html">Daily Summary</a></li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>

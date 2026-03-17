@@ -1,18 +1,1 @@
-{
-  "status": "ok",
-  "timestamp": "2023-10-05T12:34:56Z",
-  "checks": {
-    "api": {
-      "status": "ok",
-      "latencyMs": 20
-    },
-    "database": {
-      "status": "ok",
-      "latencyMs": 15
-    },
-    "cache": {
-      "status": "ok",
-      "latencyMs": 5
-    }
-  }
-}
+{"status":"ok","timestamp":"2026-03-17T00:00:00Z","checks":{"api":{"status":"ok","latencyMs":18},"database":{"status":"ok","latencyMs":24},"cache":{"status":"ok","latencyMs":7}}}
