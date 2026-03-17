@@ -1,9 +1,11 @@
 ---
 temperature: 0
 ---
+
 Generate a minimal HTML status page that displays a project build dashboard.
 
 Include:
+
 - A title "nlang CI Test"
 - A section showing build status (placeholder text is fine)
 - A section linking to /reports/uptime.html and /reports/daily-summary.html
@@ -12,4 +14,4 @@ Include:
 Use this build metadata:
 @{status.json}
 
-Output a complete HTML document.
+Output a complete HTML document..
