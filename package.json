@@ -1,0 +1,11 @@
+{
+  "name": "nlang-test-repo-ci",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test repo for nlang CI: cronjobs and build-on-push",
+  "scripts": {
+    "build": "nlang build",
+    "init": "nlang init",
+    "dry-run": "nlang build --dry-run"
+  }
+}
