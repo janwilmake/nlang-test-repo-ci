@@ -42,7 +42,7 @@ jobs:
           node-version: '22'
 
       - name: Install nlang
-        run: npm install -g nlang
+        run: npm install -g nlang-cli
 
 
       - name: Restore cache
@@ -59,17 +59,17 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.file }}" ]; then
-            npx nlang build --file "${{ github.event.inputs.file }}"
+            nlang build --file "${{ github.event.inputs.file }}"
           elif [ "${{ github.event.schedule }}" = "0 9 * * 1" ]; then
-            npx nlang build --file "reports/weekly-report.html.md"
+            nlang build --file "reports/weekly-report.html.md"
           elif [ "${{ github.event.schedule }}" = "0 * * * *" ]; then
-            npx nlang build --file "reports/uptime.html.md"
+            nlang build --file "reports/uptime.html.md"
           elif [ "${{ github.event.schedule }}" = "0 6 * * *" ]; then
-            npx nlang build --file "reports/daily-summary.html.md"
+            nlang build --file "reports/daily-summary.html.md"
           elif [ "${{ github.event.schedule }}" = "*/15 * * * *" ]; then
-            npx nlang build --file "monitoring/health.json.md"
+            nlang build --file "monitoring/health.json.md"
           else
-            npx nlang build
+            nlang build
           fi
 
       - name: Commit and push output
