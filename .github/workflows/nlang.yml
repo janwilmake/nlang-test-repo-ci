@@ -60,15 +60,14 @@ jobs:
         run: |
           if [ -n "${{ github.event.inputs.file }}" ]; then
             npx nlang build --file "${{ github.event.inputs.file }}"
-          if [ "${{ github.event.schedule }}" = "0 9 * * 1" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 9 * * 1" ]; then
             npx nlang build --file "reports/weekly-report.html.md"
-          elif [ ${{ github.event.schedule }}" = "0 * * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 * * * *" ]; then
             npx nlang build --file "reports/uptime.html.md"
-          elif [ ${{ github.event.schedule }}" = "0 6 * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 6 * * *" ]; then
             npx nlang build --file "reports/daily-summary.html.md"
-          elif [ ${{ github.event.schedule }}" = "*/15 * * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "*/15 * * * *" ]; then
             npx nlang build --file "monitoring/health.json.md"
-          fi
           else
             npx nlang build
           fi
