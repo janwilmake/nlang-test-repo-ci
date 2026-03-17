@@ -14,4 +14,4 @@ Include:
 Use this build metadata:
 @{status.json}
 
-Output a complete HTML document..
+Output a complete HTML document
