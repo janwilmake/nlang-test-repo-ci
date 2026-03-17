@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Uptime Report</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #161b22;
+        }
+        tr:nth-child(even) {
+            background-color: #21262d;
+        }
+        tr:hover {
+            background-color: #30363d;
+        }
+        .summary {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hourly Uptime Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Response Time (ms)</th>
+                <th>Last Check</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>API</td>
+                <td>UP</td>
+                <td>123</td>
+                <td>2023-10-01T12:00:00Z</td>
+            </tr>
+            <tr>
+                <td>Auth</td>
+                <td>UP</td>
+                <td>98</td>
+                <td>2023-10-01T12:00:00Z</td>
+            </tr>
+            <tr>
+                <td>CDN</td>
+                <td>UP</td>
+                <td>150</td>
+                <td>2023-10-01T12:00:00Z</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>UP</td>
+                <td>75</td>
+                <td>2023-10-01T12:00:00Z</td>
+            </tr>
+            <tr>
+                <td>Queue</td>
+                <td>UP</td>
+                <td>110</td>
+                <td>2023-10-01T12:00:00Z</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="summary">All systems operational</div>
+</body>
+</html>
